@@ -37,7 +37,7 @@ namespace CleanetCode.GuessingNumberGame.CLI
                     string userInput = Console.ReadLine();
                     bool isIntNumber = int.TryParse(userInput, out userNumber);
 
-                    isCorrectNumber = isIntNumber && userNumber > minValue && userNumber < maxValue;
+                    isCorrectNumber = isIntNumber && userNumber >= minValue && userNumber < maxValue;
 
                     if (!isCorrectNumber)
                         Console.WriteLine($"\nВы ввели {userInput}. Нужно ввести число от {minValue} до {maxValue - 1}\n");
