@@ -16,11 +16,12 @@ namespace CleanetCode.GuessingNumberGame.CLI
                 userName = Console.ReadLine();
             }
 
-            Console.WriteLine($"\nПривет, {userName}\nЯ загадал тебе число от 0 до 99\nПопробуй отгадать\n");
-
-            Random rnd = new Random();
             int minValue = 0;
             int maxValue = 100;
+
+            Console.WriteLine($"\nПривет, {userName}\nЯ загадал тебе число от {minValue} до {maxValue - 1}\nПопробуй отгадать\n");
+
+            Random rnd = new Random();
             int secretNumber = rnd.Next(minValue, maxValue);
             bool isWin = false;
             int attemptsAmount = 1;
